@@ -64,25 +64,15 @@ table {
   width: 960px;
 }
 .container {
+  display: flex;
+  flex-direction: row;
   padding-left: 30px;
   padding-right: 30px;
 }
-.grid,
-.col-1-3,
-.col-2-3 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.col-1-3,
-.col-2-3  {
-  display: inline-block;
-  vertical-align: top;
-}
-.col-1-3 {
-  width: 33.33%;
-}
-.col-2-3 {
-  width: 66.66%;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
 }
 
 /*
@@ -160,10 +150,6 @@ cite, em {
   Primary header
   ========================================
 */
-.primary-nav {
-  font-size: 14px;
-  font-weight: 400;
-}
 
 .logo {
   border-top: 4px solid #648880;
@@ -173,6 +159,9 @@ cite, em {
   padding: 40px 0 22px 0;
 }
 
+.header-section {
+  margin: 60px 0 0 40px;
+}
 /*
   ========================================
   Primary footer
@@ -188,6 +177,9 @@ cite, em {
 .primary-footer small{
   float: left;
   font-weight: 400;
+}
+.primary-footer-nav {
+  margin-left: 20px;
 }
 /*
   ========================================
@@ -215,15 +207,17 @@ cite, em {
   ========================================
 */
 
+a {
+  color: #648880;
+  text-decoration: none;
+}
 a:hover {
   color: #a9b2b9;
 }
-a {
-  color: #648880;
-}
-.tagline {
-  margin: 66px 0 22px 0;
-}
+
 .teaser a:hover h3{
   color: #a9b2b9;
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
 }
